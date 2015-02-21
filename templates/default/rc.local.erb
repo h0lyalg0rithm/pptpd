@@ -10,5 +10,8 @@
 # bits.
 #
 # By default this script does nothing.
+iptables -I INPUT -p tcp --dport 1723 -j ACCEPT
+iptables -I INPUT -p gre -j ACCEPT
 iptables  -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables-save
 exit 0
