@@ -47,6 +47,17 @@ Attributes
 
 Usage
 -----
+A detailed rundown on using this cookbook is available on my [Website](http://surajms.com/2015/02/install-pptpd-server-without-a-hitch/).
+
+####Librarian-chef
+Add this to your Cheffile
+
+```
+cookbook 'pptpd', github: 'h0lyalg0rithm/pptpd'
+
+```
+Run `librarian-chef install` to download the cookbooks.
+
 Just include `pptpd` in your node's `run_list`:
 
 ```
@@ -66,10 +77,12 @@ Add you own user name recommended
   "run_list": [
     "recipe[pptpd]"
   ],
-  "users":[{
-  	"username": "<Your username>",
-  	"password": "<Your password>"
-  }]
+  "pptpd":{
+  	"users":[{
+	  	"username": "<Your username>",
+	  	"password": "<Your password>"
+	  }]
+  }
 }
 ```
 
