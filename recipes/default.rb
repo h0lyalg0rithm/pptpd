@@ -58,5 +58,12 @@ execute "Save and restart" do
   command "iptables -A FORWARD -i eth0 -o ppp+ -j ACCEPT"
   command "iptables-save"
   command "sysctl -p"
-  command "/etc/init.d/pptpd restart"
+end
+
+service "pptpd" do
+  action :restart
+end
+
+service "rc.local" do
+  action :start
 end
