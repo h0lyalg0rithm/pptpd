@@ -1,0 +1,10 @@
+GIT
+  remote: https://github.com/h0lyalg0rithm/pptpd
+  ref: master
+  sha: 1266ab8cb65a0702bc02fdf7b02c69901a2dc6a7
+  specs:
+    pptpd (0.1.0)
+
+DEPENDENCIES
+  pptpd (>= 0)
+

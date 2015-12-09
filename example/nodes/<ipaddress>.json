@@ -1,0 +1,14 @@
+{
+  "run_list": [
+    "recipe[pptpd]"
+  ],
+  "automatic": {
+    "ipaddress": "<ipaddress>"
+  },
+  "pptpd":{
+    "users":[{
+       "username": "<username>",
+       "password": "<password>"
+     }]
+  }
+}
