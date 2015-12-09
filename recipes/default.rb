@@ -56,7 +56,7 @@ execute "Save and restart" do
   command "iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE"
   command "iptables -A FORWARD -i ppp+ -o eth0 -j ACCEPT"
   command "iptables -A FORWARD -i eth0 -o ppp+ -j ACCEPT"
-   command "iptables-save"
+  command "iptables-save"
   command "sysctl -p"
   command "/etc/init.d/pptpd restart"
 end
